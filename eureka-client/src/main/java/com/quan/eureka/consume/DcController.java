@@ -1,4 +1,4 @@
-package com.quan.eureka.client;
+package com.quan.eureka.consume;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -13,6 +13,9 @@ public class DcController {
 
     @GetMapping("/dc")
     public String dc() {
+        /*String nullStr = null;
+        nullStr.toString();*/
+
         String services = "Services: " + discoveryClient.getServices();
         System.out.println(services);
         return services;
